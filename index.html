@@ -45,9 +45,36 @@
       header {
         display: flex;
         justify-content: space-between;
+
+        /* Width - Height - Box - shadow*/
+        padding-right: 5%;
+        padding-left: 2%;
+        box-shadow: 0 4 30 rgba(0, 0, 0, 0.1);
+
+        /*Background */
+        background: #0b0c0c;
+        background: linear-gradient(
+          90deg,
+          rgba(42, 123, 155, 1) 0%,
+          rgba(87, 199, 133, 1) 50%,
+          rgba(237, 221, 83, 1) 100%
+        );
+        /* Items */
+        align-items: center;
+        /* Animation */
+        animation: fadeInLeft 0.8s ease;
+      }
+      .image-container {
+        display: flex;
+        background-color: rgba(42, 123, 155, 1);
+        transition: transform 0.3 ease;
+        align-items: center;
+      }
+      .image-container:hover {
+        transform: scale(1.1);
       }
 
-      /* Main */
+      /* ---Main---- */
       section {
         display: flex;
         justify-content: end;
@@ -78,19 +105,19 @@
   </head>
   <body>
     <header>
-      <div>
+      <div class="image-container">
         <img
           src="Images/travel-svgrepo-com.svg"
-          alt="Example Icon"
+          alt="Traveling Icon"
           width="50"
           height="50"
         />
       </div>
 
-      <form action="">
+      <form class="search-for">
         <input type="text" placeholder="Search..." />
         <button type="submit">Search</button>
-        <button type="submit">Reset</button>
+        <button type="reset">Reset</button>
       </form>
     </header>
     <main height="100vh">
